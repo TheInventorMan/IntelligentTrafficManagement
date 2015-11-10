@@ -1,0 +1,43 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block extended_scripts %}
+  <script src="http://flot.googlecode.com/svn/trunk/jquery.flot.js" type="text/javascript"></script>
+  <script src="/static/js/dashboard.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      /* create 3 instances of the dashboard updater for the 3 aggregate types */
+      var d_m = new Dashboard('{% url djutils_dashboard_data_minute %}', 'minute', 10),
+          d_h = new Dashboard('{% url djutils_dashboard_data_hour %}', 'hour', 60*60),
+          d_d = new Dashboard('{% url djutils_dashboard_data_day %}', 'day', 24*60*60);
+    });
+  </script>
+  
+  <link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
+{% endblock %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content_header %}Dashboard{% endblock %}
+
+{% block content %}
+  <div id="dashboard">
+    {% for panel in panel_list %}
+      <div class="panel minute">
+        <h3>{{ panel.title }}</h3>
+        <div class="panel-data panel-data-minute" id="dashboard-minute-{{ panel.id }}">
+        </div>
+      </div>
+      <div class="panel hour">
+        <h3>{{ panel.title }}</h3>
+        <div class="panel-data panel-data-hour" id="dashboard-hour-{{ panel.id }}">
+        </div>
+      </div>
+      <div class="panel day">
+        <h3>{{ panel.title }}</h3>
+        <div class="panel-data panel-data-day" id="dashboard-day-{{ panel.id }}">
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
