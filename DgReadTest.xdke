@@ -1,0 +1,60 @@
+{
+  "project": {
+    "projectSettingsVersion": "2.0.0",
+    "initialAutoPluginCount": 0,
+    "currentBuildConfiguration": null,
+    "projectFiles": {},
+    "projectDirectories": {}
+  },
+  "iot-tab": {
+    "fileStatus": {
+      "DgReadTest.xdk": {
+        "previousModTime": 1445101584672,
+        "modified": 1445101584672,
+        "seen": true,
+        "name": "DgReadTest.xdk"
+      },
+      "DgReadTest.xdke": {
+        "previousModTime": 1445395663003,
+        "modified": 1445395663003,
+        "seen": true,
+        "name": "DgReadTest.xdke"
+      },
+      "icon.png": {
+        "previousModTime": 1445101584497,
+        "modified": 1445101584497,
+        "seen": true,
+        "name": "icon.png"
+      },
+      "main.js": {
+        "previousModTime": 1445395734377,
+        "modified": 1445395734377,
+        "seen": true,
+        "name": "main.js"
+      },
+      "package.json": {
+        "previousModTime": 1445101584497,
+        "modified": 1445101584497,
+        "seen": true,
+        "name": "package.json"
+      },
+      "README.md": {
+        "previousModTime": 1445101584497,
+        "modified": 1445101584497,
+        "seen": true,
+        "name": "README.md"
+      },
+      "xdk/project-info.json": {
+        "previousModTime": 1445101584656,
+        "modified": 1445101584656,
+        "seen": true,
+        "name": "xdk/project-info.json"
+      }
+    },
+    "boardFileStatus": {
+      "main.js": {
+        "previousModTime": 1445395734992
+      }
+    }
+  }
+}
